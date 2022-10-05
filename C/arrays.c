@@ -88,3 +88,4 @@ void llena3(float estFun[20]){
         scanf("%d", &resp);
     }while(resp== 1);
 }
+
