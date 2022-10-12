@@ -57,7 +57,7 @@ void sustituye(int cal[10], int vals[2], int posI, int posF){
 void ordena(int cal[10], int val[2]){
     int iteraciones = 10/2, posI = 0, posF =9;
     int ix;
-    for(ix = 0; ix < iteraciones; ix ++){
+    for(ix = 0; ix < iteraciones; ix++){
         maxMin(cal, val, posI, posF);
         sustituye(cal, val, posI, posF);
         posI++;
