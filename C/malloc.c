@@ -3,12 +3,19 @@
 
 int main(){
     int *apuntador, ix = 0, tamInt, tamApun, tamTot;
-    apuntador = (int*)malloc(10*sizeof(int));
-    for(ix = 0; ix < 10; ix++)
-        apuntador[ix]=ix;
+    int totCal;
+    printf("Ingrese la cantidad de calificaciones a promediar: ");
+    scanf("%d",&totCal);
+    apuntador = (int*)malloc(totCal*sizeof(int));
+    for(ix = 0; ix < totCal; ix++){
+        printf("Ingresa la calificacion en el indice %d:",ix);
+        scanf("%d",&apuntador[ix]);
+    
+    }
+        
     //printf("|");
-    for(ix = 0; ix < 10; ix++)
-        printf("| %d ",apuntador[ix]=ix);
+    for(ix = 0; ix < totCal; ix++)
+        printf("| %d ",apuntador[ix]);
     printf("|\n");
     tamInt = sizeof(tamInt);
     tamApun = sizeof(apuntador);
