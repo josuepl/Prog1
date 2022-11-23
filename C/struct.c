@@ -12,32 +12,37 @@ struct structAlumno
 };
 
 int main(){
-    int ix = 0;
+    int ix = 0, tamAlum;
     struct structAlumno josue;
-    strcpy(josue.nombre,"JOSUE");
+    struct structAlumno alumnos[5];
+    struct structAlumno *arrAlumnos;
+    //apuntador = (int*)malloc(totCal*sizeof(int));
+    tamAlum = 3;
+    arrAlumnos = (struct structAlumno*)malloc(tamAlum*sizeof(struct structAlumno));
+    /*strcpy(josue.nombre,"JOSUE");
     josue.edad = 10;
     josue.creditos = 145.5;
     strcpy(josue.genero,"Masculino");
     josue.matricula = 202212345;
     printf("%s, \n",josue.nombre);
-    struct structAlumno alumnos[5];
-    for(ix = 0; ix < 5; ix++){
+    */
+    for(ix = 0; ix < tamAlum; ix++){
         printf("Ingresa el nombre del alumno: ");
-        scanf("%s",&alumnos[ix].nombre);
+        scanf("%s",&arrAlumnos[ix].nombre);
         printf("Ingresa el genero del alumno: ");
-        scanf("%s",&alumnos[ix].genero);
+        scanf("%s",&arrAlumnos[ix].genero);
         printf("Ingresa la edad del alumno: ");
-        scanf("%d",&alumnos[ix].edad);
+        scanf("%d",&arrAlumnos[ix].edad);
         printf("Ingresa los creditos del alumno: ");
-        scanf("%f",&alumnos[ix].creditos);
+        scanf("%f",&arrAlumnos[ix].creditos);
         printf("Ingresa la matricula del alumno: ");
-        scanf("%d",&alumnos[ix].matricula);
+        scanf("%d",&arrAlumnos[ix].matricula);
 
         //printf("%s - \n",alumnos[ix].nombre);    
     }
     printf("Los alumnos almacenados son: \n");
-    for(ix = 0; ix < 5; ix++){
-        printf("Nombre: %s Genero: %s Edad: %d Creditos:%f Matricula:%d \n", alumnos[ix].nombre, alumnos[ix].genero, alumnos[ix].edad, alumnos[ix].creditos,alumnos[ix].matricula); 
+    for(ix = 0; ix < tamAlum; ix++){
+        printf("Nombre: %s Genero: %s Edad: %d Creditos:%f Matricula:%d \n", arrAlumnos[ix].nombre, arrAlumnos[ix].genero, arrAlumnos[ix].edad, arrAlumnos[ix].creditos,arrAlumnos[ix].matricula); 
         //printf("%d",ix);
     }
     return 0;
